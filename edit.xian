@@ -1,0 +1,26 @@
+  
+{{> head}}
+
+<form action="/update" method="POST">
+  <input type="hidden" name="id" value="{{data.id}}">
+
+  <label for="Name">Name</label>
+  <input type="text" id="Name" name="Name" value="{{data.Name}}" required>
+
+  <label for="categories">Categories</label>
+  <input type="text" id="categories" name="categories" value="{{data.categories}}" required>
+
+  <label for="brand">Brand</label>
+  <input type="text" id="brand" name="brand" value="{{data.brand}}" required>
+
+  <label for="flavor">Flavor</label>
+  <input type="text" id="flavor" name="flavor" value="{{data.flavor}}" required>
+
+  <label for="price">Price</label>
+  <input type="number" id="price" name="price" value="{{data.price}}" step="0.01" min="0" required>
+
+  <label for="cost">Cost</label>
+  <input type="number" id="cost" name="cost" value="{{data.cost}}" step="0.01" min="0" required>
+
+  <input type="submit" name="save" value="Update">
+</form>
